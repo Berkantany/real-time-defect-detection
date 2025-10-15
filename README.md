@@ -20,3 +20,4 @@ Additional Notes
 If you experience performance issues such as lagging or freezing, it is likely caused by the resolution settings or the window scaling logic. You can access and adjust these settings directly within the code.
 
 Berkant Akıncı
+Doğu Pres
