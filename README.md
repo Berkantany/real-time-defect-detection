@@ -78,6 +78,36 @@ Then, manually copy them into: **dist/application_name/_internal/neoapi/**
 
 ----
 
+## 📘 User Guide (GUI Usage)
+
+After building the project, launch the **desktop application**.
+
+### 🟢 Step 1: Starting the System
+On the first screen, click **“Sistemi Başlat”** (which means **Start the System**).  
+This will initialize the main process and prepare the visual inspection workflow.
+
+### 🟢 Step 2: Running the Main Interface
+After that, click **“Başlat”** (meaning **Start**) on the next screen.  
+At the bottom-left terminal area, make sure you can see both of these status messages:
+- **Arduino’ya bağlandı** → *Connected to Arduino*  
+- **Kameraya bağlandı** → *Connected to Camera*  
+
+Once both connections are established, the system is **ready for operation**.
+
+### ⚙️ Step 3: Adjusting Settings
+From the right panel, click **“Ayarları Aç”** (meaning **Open Settings**).  
+After entering your password, you can configure:
+- **Distance** parameters  
+- **Part count** (how many pieces should be detected/assembled)  
+- **Relay activation time** (how long the pneumatic system stays active)
+
+When you’re done, click **“Ayarları Kitle”** (meaning **Lock Settings**) to **save and apply your configurations**.
+
+---
+
+✅ After completing these steps, your automated visual inspection system will be **fully operational and ready for continuous inspection.**
+
+
 ⚡ Performance Tips
 
 If you notice lagging or freezing, it’s likely related to:
