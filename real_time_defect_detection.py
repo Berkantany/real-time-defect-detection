@@ -318,7 +318,7 @@ class App(ctk.CTk):
         self.controller = controller
         self.is_closing = False
         self.settings_locked = True
-        self.SETTINGS_PASSWORD = "Dp123456"
+        self.SETTINGS_PASSWORD = "Password"
 
         self.title("Visual Analysis and Quality Control System")
         self.geometry("1600x900")
@@ -528,3 +528,4 @@ if __name__ == "__main__":
     welcome_screen = WelcomeScreen(start_callback=launch_main_app)
 
     welcome_screen.mainloop()
+
