@@ -1,6 +1,10 @@
 # 🧠 Automated Visual Inspection System
 
-This project is a **comprehensive automated visual inspection system** designed for **industrial environments**.  
+This project is a **comprehensive automated visual inspection system** designed for **industrial environments**.
+
+It is intended for use in the **packaging of industrial parts**, where a mandrel places components into packages.  
+Using advanced **image processing algorithms**, the system detects conditions such as **defective, missing, or incorrectly placed parts**.  
+When an abnormal condition is detected, the system communicates with the **Arduino-controlled pneumatic mechanism** attached to the mandrel to **lock the system and halt the packaging process**, while simultaneously **notifying the operator** about the detected issue.
 It leverages the power of **Python**, **OpenCV** for image processing, and a modern **CustomTkinter GUI** to provide a seamless real-time inspection experience.
 
 ---
@@ -23,7 +27,7 @@ Its modular structure makes it adaptable to different camera models, production 
 
 ## 🖥️ System Architecture
 
-![System Diagram](docs/images/system_diagram.png)
+![System Diagram](docs/images/diagram.png)
 
 
 ---------------
@@ -57,10 +61,13 @@ Use the ID that starts with U3V, not the one labeled S/N.
 
 🧱 Building an Executable (.exe)
 
-You can past the code to terminal in createExe.py , after building you may notice that certain NeoAPI dependencies in dist/application_name/_internal/neoapi/such as: xxx.dll, xxx.cti  were not automatically included in the build. 
+You can past the code to terminal in createExe.py , after building you may notice that certain NeoAPI dependencies in dist/application_name/_internal/neoapi/  such as: xxx.dll, xxx.cti  were not automatically included in the build. 
 
 To fix this:
-locate these files in the Baumer NeoAPI SDK that you installed earlier. Then, manually copy them into: dist/application_name/_internal/neoapi/
+
+go to **C:\Program Files\Baumer Camera Explorer** . Find the **bgapi2** files like bgapi2_genicam.dll .
+
+Then, manually copy them into: **dist/application_name/_internal/neoapi/**
 
 ----
 
@@ -83,6 +90,11 @@ GUI refresh interval inside VisionController 'class'
 ---
 🖼️ Example GUI Screenshots and Parts
 
+**Defective part**
+![System Diagram](docs/images/defected.jpg)
+
+**Original Part**
+![System Diagram](docs/images/original.jpg)
 
 **Main Interface**
 ![System Diagram](docs/images/main_gui.png)
