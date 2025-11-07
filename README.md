@@ -62,8 +62,9 @@ Use the ID that starts with U3V, not the one labeled S/N.
 🧱 Building an Executable (.exe)
 
 You can past the code to terminal above or in createExe.py
-
-'python -m PyInstaller --noconsole --name "YourApplicationName" your_script_name.py'
+``` 
+python -m PyInstaller --noconsole --name "YourApplicationName" your_script_name.py
+``` 
 
 Building is going start automatically in your source file.
 
