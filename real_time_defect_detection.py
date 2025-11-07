@@ -1,3 +1,6 @@
+## Berkant Akinci
+## date : 07.11.2025
+
 import customtkinter as ctk
 import cv2
 import neoapi
@@ -523,4 +526,5 @@ if __name__ == "__main__":
         app.mainloop()
 
     welcome_screen = WelcomeScreen(start_callback=launch_main_app)
+
     welcome_screen.mainloop()
