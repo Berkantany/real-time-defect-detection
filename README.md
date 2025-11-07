@@ -22,24 +22,78 @@ Its modular structure makes it adaptable to different camera models, production 
 ---
 
 ## 🖥️ System Architecture
-```text
-+-----------------------------+
-|  Industrial Camera (Baumer) |
-+-------------+---------------+
-              |
-              v
-+-----------------------------+
-|     Python + OpenCV Core    |
-| (Image Capture & Processing)|
-+-------------+---------------+
-              |
-              v
-+-----------------------------+
-|     CustomTkinter GUI       |
-| (Visualization & Control)   |
-+-----------------------------+
+
+![System Diagram](docs/images/system_diagram.png)
 
 
+---------------
+⚙️ Prerequisites
 
+Before running the project, make sure you have installed the following:
+
+1️⃣ Baumer neoapi GAPI SDKs
+
+The system cannot establish a connection with the camera without the SDKs installed.
+You can download them from the official Baumer website:
+🔗 https://www.baumer.com/
+
+Once installed, confirm your camera is detected in Baumer Camera Explorer (you can also update your camera software with Baumer Camera Explorer).
+
+---------------
+
+🎥 Camera Configuration
+
+Your camera ID is physically printed on the device label.
+
+Example ID:2825000092AD
+
+If you cannot find it, open Baumer Camera Explorer and check the connected camera list.
+
+⚠️ Important:
+Use the ID that starts with U3V, not the one labeled S/N.
+
+--------------
+
+
+🧱 Building an Executable (.exe)
+
+You can past the code to terminal in createExe.py , after building you may notice that certain NeoAPI dependencies in dist/application_name/_internal/neoapi/such as: xxx.dll, xxx.cti  were not automatically included in the build. 
+
+To fix this:
+locate these files in the Baumer NeoAPI SDK that you installed earlier. Then, manually copy them into: dist/application_name/_internal/neoapi/
+
+----
+
+⚡ Performance Tips
+
+If you notice lagging or freezing, it’s likely related to:
+
+High **camera resolution**
+
+Inefficient **window scaling**
+
+Low system resources (CPU/GPU)
+
+✅ You can modify these parameters directly in the code:
+
+Frame size and FPS inside 'main.py'
+
+GUI refresh interval inside VisionController 'class'
+
+---
+🖼️ Example GUI Screenshots and Parts
+
+
+**Main Interface**
+![System Diagram](docs/images/main_gui.png)
+
+**Defect Detection View**
+![System Diagram](docs/images/defect_detection.png)
+Detected defective regions are automatically highlighted in red.
+
+---
+👨‍💻 Author
+
+Berkant Akıncı
 
 
